@@ -36,3 +36,10 @@ ENV LANGUAGE=en_US.UTF-8
 
 ENV JAVA_HOME /usr/lib/jvm/java-8-openjdk-amd64/
 RUN export JAVA_HOME
+
+ENV JENKINS_HOME /var/jenkins
+
+EXPOSE 8080 50000
+
+CMD ["/usr/bin/java", "-jar", "/usr/share/jenkins/jenkins.war"]
+
